@@ -41,10 +41,10 @@ Optimized for mobile usage
 
 2. Wireframes
 
-<img src="docs/wireframes/scanner.png" width="300">
+![face recognition](https://github.com/benyahia-raouf/attendance-appointment-flutter/blob/feda80318a24657313b6b990a82c3fc735022cd3/scanner.png)
 face recognition
 
-<img src="docs/screenshots/attendance_List.png" width="300">
+![Attendance List](https://github.com/benyahia-raouf/attendance-appointment-flutter/blob/feda80318a24657313b6b990a82c3fc735022cd3/attendance_List.png)
 Attendance List
 
 3. Project Structure (Clean Architecture)
