@@ -48,24 +48,7 @@ face recognition
 Attendance List
 
 3. Project Structure (Clean Architecture)
-lib/
-  core/
-  app.dart
-  main.dart
-  features/
-    attendance/
-      presentation/
-        pages/
-        cubit/
-        widgets/
-      domain/
-        models/
-        repositories/
-        usecases/
-      data/
-        datasources/
-        repositories/
-
+![Project Structure (Clean Architecture)](https://github.com/benyahia-raouf/attendance-appointment-flutter/blob/65c4faf2ef5499ad30632a003e17bdee2e53fca6/Project%20Structure%20(Clean%20Architecture).png)
 4. Tech Stack
 Frontend
 
