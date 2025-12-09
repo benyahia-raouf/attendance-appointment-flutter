@@ -2,7 +2,7 @@ import 'package:attendanceappointment/core/attendance_helper.dart';
 import 'package:attendanceappointment/features/attendance/domain/entities/attendance_entity.dart';
 import 'package:attendanceappointment/features/attendance/domain/repositories/attendance_repository.dart';
 import 'package:attendanceappointment/features/attendance/presentation/cubit/attendance_state.dart';
-import 'package:attendanceappointment/features/registration/entities/employee_entity.dart';
+import 'package:attendanceappointment/features/registration/domain/entities/employee_entity.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:intl/intl.dart';
 import 'dart:async';

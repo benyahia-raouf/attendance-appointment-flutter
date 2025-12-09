@@ -1,5 +1,5 @@
 import 'package:attendanceappointment/features/attendance/domain/entities/attendance_entity.dart';
-import 'package:attendanceappointment/features/registration/entities/employee_entity.dart';
+import 'package:attendanceappointment/features/registration/domain/entities/employee_entity.dart';
 
 abstract class CheckInRepository {
   Future<List<double>?> extractEmbedding(dynamic file);

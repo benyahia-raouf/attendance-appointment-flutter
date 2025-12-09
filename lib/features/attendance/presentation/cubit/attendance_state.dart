@@ -1,4 +1,4 @@
-import 'package:attendanceappointment/features/registration/entities/employee_entity.dart';
+import 'package:attendanceappointment/features/registration/domain/entities/employee_entity.dart';
 
 abstract class CheckInState {}
 
