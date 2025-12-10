@@ -4,14 +4,14 @@ import 'package:attendanceappointment/features/attendance/presentation/cubit/att
 import 'package:attendanceappointment/features/attendance/presentation/cubit/attendance_state.dart';
 import 'dart:io';
 
-class CheckInScreen extends StatefulWidget {
-  const CheckInScreen({super.key});
+class AttendanceScreen extends StatefulWidget {
+  const AttendanceScreen({super.key});
 
   @override
-  State<CheckInScreen> createState() => _CheckInScreenState();
+  State<AttendanceScreen> createState() => _AttendanceScreenState();
 }
 
-class _CheckInScreenState extends State<CheckInScreen> {
+class _AttendanceScreenState extends State<AttendanceScreen> {
   @override
   Widget build(BuildContext context) {
     return BlocBuilder<CheckInCubit, CheckInState>(
