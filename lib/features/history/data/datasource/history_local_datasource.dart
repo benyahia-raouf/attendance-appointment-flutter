@@ -17,10 +17,11 @@ class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
   Future<List<String>> getAvailableDates() async {
     final directory = await getApplicationDocumentsDirectory();
     final files = directory
-        .listSync()
+        .listSync(recursive: false)
+        .whereType<File>()
         .where(
           (file) =>
-              file.path.contains('attendance_') && file.path.endsWith('.json'),
+              file.path.endsWith('.json') && file.path.contains('/attendance_'),
         )
         .toList();
 
