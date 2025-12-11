@@ -21,7 +21,10 @@ class _NavigationScreenState extends State<NavigationScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final screens = [const RegistrationScreen(), AttendanceScreen()];
+    final screens = [
+      const RegistrationScreen(),
+      AttendanceScreen(cameras: widget.cameras),
+    ];
 
     return Scaffold(
       body: screens[_selectedIndex],

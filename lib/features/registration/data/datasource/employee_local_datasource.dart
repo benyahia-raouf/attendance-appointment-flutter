@@ -8,7 +8,7 @@ abstract class EmployeeLocalDataSource {
 }
 
 class EmployeeLocalDataSourceImpl implements EmployeeLocalDataSource {
-  static const String boxName = 'persons';
+  static const String boxName = 'employees';
 
   @override
   Future<List<EmployeeModel>> getAllEmployees() async {
