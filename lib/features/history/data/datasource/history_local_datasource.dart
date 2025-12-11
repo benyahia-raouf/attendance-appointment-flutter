@@ -40,9 +40,24 @@ class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
   }
 
   @override
-  Future<String> exportToCSV(String date, List<CheckInRecordModel> records) {
-    // TODO: implement exportToCSV
-    throw UnimplementedError();
+  Future<String> exportToCSV(
+    String date,
+    List<CheckInRecordModel> records,
+  ) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final csvFile = File('${directory.path}/attendance_${date}_export.csv');
+
+    final csvContent = StringBuffer();
+    csvContent.writeln('Name,Time,Date,Similarity,Status');
+
+    for (var record in records) {
+      csvContent.writeln(
+        '${record.name},${record.time},$date,${(record.similarity * 100).toStringAsFixed(1)}%,${record.status}',
+      );
+    }
+
+    await csvFile.writeAsString(csvContent.toString());
+    return csvFile.path;
   }
 
   @override
