@@ -45,7 +45,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
       await _cameraController!.initialize();
       if (mounted) setState(() => _isCameraInitialized = true);
     } catch (e) {
-      print('Camera error: $e');
+      //print('Camera error: $e');
     }
   }
 
@@ -71,7 +71,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
         await context.read<CheckInCubit>().performCheckIn(embedding, persons);
       }
     } catch (e) {
-      print('Process error: $e');
+      //print('Process error: $e');
     }
   }
 
@@ -127,7 +127,7 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                                     child: Container(
                                       padding: const EdgeInsets.all(16),
                                       decoration: BoxDecoration(
-                                        color: Colors.black.withOpacity(0.7),
+                                        color: Colors.black.withAlpha(179),
                                         borderRadius: BorderRadius.circular(12),
                                       ),
                                       child: Column(

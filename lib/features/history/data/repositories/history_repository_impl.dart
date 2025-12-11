@@ -3,6 +3,7 @@ import 'package:attendanceappointment/features/attendance/domain/entities/attend
 import 'package:attendanceappointment/features/history/data/datasource/history_local_datasource.dart';
 import 'package:attendanceappointment/features/history/domain/repositories/history_repository.dart';
 import 'package:attendanceappointment/features/registration/domain/entities/employee_entity.dart';
+import 'package:intl/intl.dart';
 
 class HistoryRepositoryImpl implements HistoryRepository {
   final HistoryLocalDataSource localDataSource;
@@ -18,9 +19,17 @@ class HistoryRepositoryImpl implements HistoryRepository {
   }
 
   @override
-  Future<void> generateEndOfDayReport(List<Employee> employee) {
-    // TODO: implement generateEndOfDayReport
-    throw UnimplementedError();
+  Future<void> generateEndOfDayReport(List<Employee> employees) async {
+    final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    final records = await getRecordsForDate(today);
+    final checkedInNames = records.map((r) => r.name).toSet();
+
+    final absentNames = employees
+        .where((p) => !checkedInNames.contains(p.name))
+        .map((p) => p.name)
+        .toList();
+
+    await localDataSource.addAbsentRecords(absentNames);
   }
 
   @override

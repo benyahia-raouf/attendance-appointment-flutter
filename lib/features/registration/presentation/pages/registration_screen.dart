@@ -174,7 +174,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         Container(
                           padding: const EdgeInsets.all(16),
                           decoration: BoxDecoration(
-                            color: const Color(0xFF2196F3).withOpacity(0.1),
+                            color: const Color(0xFF2196F3).withAlpha(26),
                             borderRadius: BorderRadius.circular(12),
                           ),
                           child: const Icon(
