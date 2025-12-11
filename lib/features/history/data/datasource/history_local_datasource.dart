@@ -46,8 +46,15 @@ class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
   }
 
   @override
-  Future<List<CheckInRecordModel>> getRecordsForDate(String date) {
-    // TODO: implement getRecordsForDate
-    throw UnimplementedError();
+  Future<List<CheckInRecordModel>> getRecordsForDate(String date) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final file = File('${directory.path}/attendance_$date.json');
+
+    if (await file.exists()) {
+      final content = await file.readAsString();
+      final List<dynamic> jsonList = json.decode(content);
+      return jsonList.map((e) => CheckInRecordModel.fromJson(e)).toList();
+    }
+    return [];
   }
 }
