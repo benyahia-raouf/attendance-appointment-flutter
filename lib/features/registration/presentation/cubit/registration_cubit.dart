@@ -60,7 +60,7 @@ class RegistrationCubit extends Cubit<RegistrationState> {
     }
   }
 
-  Future<void> removePerson(String id) async {
+  Future<void> removeEmployee(String id) async {
     try {
       await deleteEmployee(id);
       await loadEmployee();
