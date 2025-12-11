@@ -34,9 +34,31 @@ class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
   }
 
   @override
-  Future<void> addAbsentRecords(List<String> absentNames) {
-    // TODO: implement addAbsentRecords
-    throw UnimplementedError();
+  Future<void> addAbsentRecords(List<String> absentNames) async {
+    final directory = await getApplicationDocumentsDirectory();
+    final today = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    final file = File('${directory.path}/attendance_$today.json');
+
+    List<CheckInRecordModel> records = [];
+    if (await file.exists()) {
+      final content = await file.readAsString();
+      final List<dynamic> jsonList = json.decode(content);
+      records = jsonList.map((e) => CheckInRecordModel.fromJson(e)).toList();
+    }
+    for (var name in absentNames) {
+      records.add(
+        CheckInRecordModel(
+          name: name,
+          time: '--:--',
+          similarity: 0.0,
+          timestamp: DateTime.now(),
+          status: 'absent',
+        ),
+      );
+    }
+    await file.writeAsString(
+      json.encode(records.map((e) => e.toJson()).toList()),
+    );
   }
 
   @override
@@ -55,7 +77,6 @@ class HistoryLocalDataSourceImpl implements HistoryLocalDataSource {
         '${record.name},${record.time},$date,${(record.similarity * 100).toStringAsFixed(1)}%,${record.status}',
       );
     }
-
     await csvFile.writeAsString(csvContent.toString());
     return csvFile.path;
   }
