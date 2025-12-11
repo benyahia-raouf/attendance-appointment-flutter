@@ -1,4 +1,5 @@
 import 'package:attendanceappointment/features/attendance/presentation/pages/attendance_screen.dart';
+import 'package:attendanceappointment/features/history/presentation/pages/history_screen.dart';
 import 'package:attendanceappointment/features/registration/presentation/pages/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
@@ -24,6 +25,7 @@ class _NavigationScreenState extends State<NavigationScreen> {
     final screens = [
       const RegistrationScreen(),
       AttendanceScreen(cameras: widget.cameras),
+      const AttendanceHistoryScreen(),
     ];
 
     return Scaffold(
