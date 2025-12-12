@@ -2,7 +2,8 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 class ApiClient {
-  static const String baseUrl = 'http://192.168.100.2:8000';
+  static const String baseUrl =
+      'http://192.168.100.2:8000'; // Replace with your ipv4:8000
 
   Future<List<double>?> extractEmbedding(dynamic file) async {
     try {
