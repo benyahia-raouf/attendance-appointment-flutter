@@ -79,6 +79,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         title: 'Face Recognition',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF2196F3)),
           useMaterial3: true,
