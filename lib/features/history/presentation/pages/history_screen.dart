@@ -133,6 +133,8 @@ class AttendanceHistoryScreen extends StatelessWidget {
             ? Image.file(
                 File(imagePath),
                 fit: BoxFit.cover,
+                cacheHeight: 100,
+                cacheWidth: 100,
                 errorBuilder: (context, error, stackTrace) {
                   return Icon(Icons.person, color: statusColor, size: 28);
                 },
@@ -233,6 +235,7 @@ class AttendanceHistoryScreen extends StatelessWidget {
                                 const SizedBox(height: 12),
                                 DropdownButtonFormField<String>(
                                   value: state.selectedDate,
+                                  isExpanded: true,
                                   decoration: InputDecoration(
                                     prefixIcon: const Icon(
                                       Icons.calendar_today,

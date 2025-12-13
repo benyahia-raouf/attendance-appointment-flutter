@@ -1,6 +1,6 @@
 class CheckInHelper {
-  static const int lateBarHour = 18;
-  static const int lateBarMinute = (55);
+  static const int lateBarHour = 08;
+  static const int lateBarMinute = (00);
 
   static String classifyStatus(DateTime checkInTime) {
     final cutoffTime = DateTime(

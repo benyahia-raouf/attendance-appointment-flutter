@@ -34,7 +34,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           children: [
             Icon(Icons.person_add, color: Color(0xFF2196F3)),
             SizedBox(width: 12),
-            Text('Add New Employee'),
+            Expanded(child: Text('Add New Employee')),
           ],
         ),
         content: TextField(
