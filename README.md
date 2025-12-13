@@ -28,15 +28,15 @@ Here’s a quick look at the app:
   <img src="filterScreen.jpg" alt="Screenshot 4" width="200"> 
   
 </div>
-<div>
-  <img src="checkfail.jpg" alt="Screenshot 5" width="200"> 
-  <img src="registrationScreentablette.jpg" alt="Screenshot 6" width="200">
-</div>
 
 <div>
   <img src="addNewEmployee.jpg" alt="Screenshot 7" width="200">
   <img src="checkInSuccess.jpg" alt="Screenshot 8" width="200">
   <img src="checkInScreen.jpg" alt="Screenshot 9" width="200">
+</div>
+<div>
+  <img src="checkfail.jpg" alt="Screenshot 5" width="200"> 
+  <img src="registrationScreentablette.jpg" alt="Screenshot 6" width="200">
 </div>
 
 ---
