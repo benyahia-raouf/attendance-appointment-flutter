@@ -23,7 +23,7 @@ Here’s a quick look at the app:
 
 <div>
   <img src="registration.jpg" alt="Screenshot 1" width="200"> 
-  <img src="employeeList.jpg" alt="Screenshot 2" width="200">
+  <img src="employeesList.jpg" alt="Screenshot 2" width="200">
   <img src="historyScreenFilter.jpg" alt="Screenshot 3" width="200"> 
   <img src="filterScreen.jpg" alt="Screenshot 4" width="200"> 
   
